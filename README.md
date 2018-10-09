@@ -6,7 +6,7 @@ Diese Testfälle sind zum einen echte Testfälle für 4Test zum anderen ist dies
 Testt44Test is the test project for the test model Tool 4Test. Here are OKW test cases created with and for 4Test.
 These test cases are real test cases for 4Test and this project is also a demo project for the interaction of OKW and 4Test.
 
-## *Automatissiertes  Testdesign mit 4Test*
+## *Automatisiertes Testdesign mit 4Test*
 
 *Die Testfälle sind mit 4Test-s  Gurken basierendes Test-Modell Beschreibungsprache erstellt.
 Die aus dem Modell generierten Tesfälle werden als JUnit-Exportiert und sind mit OpenKeyWords Selenium GUI-Adapter sofort ausführbar.*
