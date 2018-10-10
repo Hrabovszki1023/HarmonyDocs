@@ -14,7 +14,12 @@
   		<artifactId>poi-ooxml</artifactId>
   		<version>3.17</version>
   	</dependency>
-  </dependencies>
+  	<dependency>
+  		<groupId>de.openkeyword</groupId>
+  		<artifactId>se</artifactId>
+  		<version>0.1.17</version>
+  	</dependency>
+      </dependencies>
    <build>
       <plugins>
         <plugin>
