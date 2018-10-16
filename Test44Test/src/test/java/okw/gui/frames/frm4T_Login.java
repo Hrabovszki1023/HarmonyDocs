@@ -5,7 +5,7 @@ import okw.gui.adapter.selenium.*;
 
 
 /**
- * https://4test.io:10443/login
+ * Frame for https://4test.io:10443/login
  * 
  * @author zoltan
  */
