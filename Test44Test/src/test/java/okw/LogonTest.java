@@ -81,6 +81,7 @@ public class LogonTest
     EN.ClickOn( "Next" );
     EN.SetValue( "Password", "four-test3" );
     EN.ClickOn( "Next" );
+    EN.VerifyExists( "Next", "NO" );
     
     EN.SelectWindow( "4Test Projects" );
     EN.VerifyExists( "Project List", "YES" );
