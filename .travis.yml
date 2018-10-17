@@ -24,6 +24,7 @@ install:
   - sudo chmod +x /usr/local/share/chromedriver
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
   # 
+  - cd ./Test44Test
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
  
 before_script:
