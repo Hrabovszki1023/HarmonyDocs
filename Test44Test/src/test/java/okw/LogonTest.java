@@ -52,14 +52,12 @@ public class LogonTest
     }
 
     
-    
   @Rule
   public TestName         name = new TestName();
 
 
-
   /** \~german
-   *  Prüft, ob 4Test Startet.
+   *  Prüft, ob 4Test startet.
    *
    * \~
    * \author Zoltan Hrabovszki
@@ -76,7 +74,7 @@ public class LogonTest
     EN.VerifyExists( "Sign in with Google", "YES" );
     EN.ClickOn( "Sign in with Google" );
     
-    EN.SelectWindow( "Google Login" );
+    EN.SelectWindow( "Google SignIn" );
     EN.SetValue( "Email or PhoneNumber", "fourtest003@gmail.com" );    
     EN.ClickOn( "Next" );
     EN.SetValue( "Password", "four-test3" );
@@ -88,5 +86,54 @@ public class LogonTest
 
     EN.StopApp( "Chrome" );
     EN.EndTest();
-}
+   }
+
+
+  /** \~german
+   *  Prüft, ob 4Te.
+   *
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.10.16
+   */
+  @Test
+  public void tc_LogOnError_WrongUser() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( "Chrome" );
+    EN.TypeKey( "URL", "https://4test.io:10443/login" );
+
+    EN.SelectWindow( "4Test Login" );
+    EN.VerifyExists( "Sign in with Google", "YES" );
+    EN.ClickOn( "Sign in with Google" );
+    
+    
+    // ===============================
+    // Wrong Account
+    // ===============================
+    EN.SelectWindow( "Google SignIn" );
+    EN.SetValue( "Email or PhoneNumber", "brhfigshete@gmail.com" );    
+    EN.ClickOn( "Next" );
+    
+    EN.VerifyValue( "Error Message", "Ihr Google-Konto wurde nicht gefunden" );   // Nemetet -> Angolra aktualizalni
+
+    
+    // ===============================
+    // Account is OK, bt Passsword is Wrong
+    // ===============================    
+    EN.SelectWindow( "Google SignIn" );
+    EN.SetValue( "Email or PhoneNumber", "fourtest001@gmail.com" );  
+    EN.ClickOn( "Next" );
+    
+    EN.SetValue( "Password", "Uschi" );    
+    EN.ClickOn( "Next" );    
+    
+    // @Istvan: ez egy WildCardMatch "*" - Barmenyi Character wildcard, "?"- pont egy Charactert wildcard,  "#" - egy szam wildcard
+    EN.VerifyValueWCM( "Error Message", "Falsches Passwort.*" );  // Nemetet -> Angolra aktualizalni
+    
+    
+    EN.StopApp( "Chrome" );
+    EN.EndTest();
+   }
+
 }

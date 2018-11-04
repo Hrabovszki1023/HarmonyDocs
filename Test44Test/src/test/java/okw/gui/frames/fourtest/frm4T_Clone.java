@@ -1,4 +1,4 @@
-package okw.gui.frames;
+package okw.gui.frames.fourtest;
 
 import okw.gui.adapter.selenium.SeBrowserChild;
 
