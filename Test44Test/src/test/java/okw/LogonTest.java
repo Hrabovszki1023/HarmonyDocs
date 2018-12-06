@@ -29,7 +29,7 @@ public class LogonTest
         // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/LogonTest_Chrome_SuccesfullLoginTest.html");
+        myLog2HTML = new Log2HTML("target/LogonTest_Chrome.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
     }
@@ -76,28 +76,6 @@ public class LogonTest
         
     EN.SelectWindow( "4Test Projects" );
     EN.VerifyExists( "Project List", "YES" );
-
-    EN.StopApp( "Chrome" );
-    EN.EndTest();
-   }
-
-  /** \~german
-   *  Prüft, ob 4Test startet.
-   *
-   * \~
-   * \author Zoltan Hrabovszki
-   * \date 2018.10.16
-   */
-  @Test
-  public void TC_Login_Smoke() throws Exception
-  {
-    EN.BeginTest( name.getMethodName() );
-    EN.StartApp( "Chrome" );
-    EN.TypeKey( "URL", "https://4test.io:20443/login" );
-
-    EN.SelectWindow( "4Test Login" );
-    EN.VerifyExists( "Select user", "YES" );
-    EN.VerifyExists( "Log in", "YES" );
 
     EN.StopApp( "Chrome" );
     EN.EndTest();
