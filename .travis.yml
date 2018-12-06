@@ -37,7 +37,7 @@ before_script:
 script:
   - whereis google-chrome-stable
   - whereis chromedriver
-  - mvn test -Dtest=LogonTest
+  - mvn test -Dtest=$TEST
 
 notifications:
   email:
