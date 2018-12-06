@@ -17,7 +17,7 @@ import org.junit.rules.TestName;
 * 
 * @author zoltan
 */
-public class LogonSmokeTest
+public class ProjectTest
 {
 
     private static Log2HTML myLog2HTML = null;
@@ -29,7 +29,7 @@ public class LogonSmokeTest
         // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/LogonSmokeTest_Chrome.html");
+        myLog2HTML = new Log2HTML("target/ProjektTest_Chrome.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
     }
@@ -64,22 +64,25 @@ public class LogonSmokeTest
    * \date 2018.10.16
    */
   @Test
-  public void TC_LoginSmoke() throws Exception
+  public void ST_Project() throws Exception
   {
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( "Chrome" );
     EN.TypeKey( "URL", "https://4test.io:20443/login" );
 
     EN.SelectWindow( "4Test Login" );
-    
-    // "Select user" Select-List
-    EN.VerifyExists( "Select user", "YES" );
-    // EN.VerifyLabel( "Select user", "Sign in to 4Test Plus" );
+    EN.Select( "Select user", "User 5" );
+    EN.ClickOn( "Log in" );
+        
+    EN.SelectWindow( "4Test Projects" );
+    EN.VerifyExists( "Project List", "YES" );
 
-    // "Log in" Button 
-    EN.VerifyExists( "Log in", "YES" );
-    EN.VerifyCaption( "Log in", "Log in" );
+    EN.VerifyExists( "Create New Project", "YES" );
+    EN.VerifyCaption( "Create New Project", "Create New Project" );
     
+    EN.VerifyExists( "Import", "YES" );
+    EN.VerifyCaption( "Import", "Import" );    
+
     EN.StopApp( "Chrome" );
     EN.EndTest();
    }
