@@ -71,7 +71,6 @@ public class LogonTest
     EN.TypeKey( "URL", "https://4test.io:20443/login" );
 
     EN.SelectWindow( "4Test Login" );
-    EN.VerifyExists( "Select user", "YES" );
     EN.Select( "Select user", "User 5" );
     EN.ClickOn( "Log in" );
         
