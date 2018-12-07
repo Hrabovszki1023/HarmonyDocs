@@ -57,7 +57,7 @@ public class ProjectTest
 
 
   /** \~german
-   *  Prüft, ob 4Test startet.
+   *  Prüft alle Objecte des Dialogs /Projekt.
    *
    * \~
    * \author Zoltan Hrabovszki
@@ -82,8 +82,67 @@ public class ProjectTest
     
     EN.VerifyExists( "Import", "YES" );
     EN.VerifyCaption( "Import", "Import" );    
-
+    
+    EN.VerifyExists( "Open User Guide", "YES" );
+    EN.VerifyCaption( "Open User Guide", "Open User Guide" );    
+    EN.VerifyValueWCM( "Open User Guide", "*/4Test_User_Guide.pdf" );    
+    
+    EN.VerifyExists( "Add sample projects", "YES" );
+    EN.VerifyCaption( "Add sample projects", "Add sample projects" );    
+    
     EN.StopApp( "Chrome" );
     EN.EndTest();
    }
+  /** \~german
+   *  Prüft, ob 4Test startet.
+   *
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.10.16
+   */
+  @Test
+  public void ST_ProjectImport() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( "Chrome" );
+    EN.TypeKey( "URL", "https://4test.io:20443/login" );
+
+    EN.SelectWindow( "4Test Login" );
+    EN.Select( "Select user", "User 5" );
+    EN.ClickOn( "Log in" );
+        
+    EN.SelectWindow( "4Test Projects" );
+    EN.ClickOn( "Import" );
+
+    EN.SelectWindow( "4Test Project Import" );
+    EN.VerifyExists( "Project List", "YES" );
+
+    EN.VerifyExists( "Create New Project", "YES" );
+    EN.VerifyCaption( "Create New Project", "Create New Project" );
+    
+    EN.VerifyExists( "Import", "YES" );
+    EN.VerifyCaption( "Import", "Import" );    
+    
+    EN.VerifyExists( "Open User Guide", "YES" );
+    EN.VerifyCaption( "Open User Guide", "Open User Guide" );    
+    EN.VerifyValueWCM( "Open User Guide", "*/4Test_User_Guide.pdf" );    
+    
+    EN.VerifyExists( "Add sample projects", "YES" );
+    EN.VerifyCaption( "Add sample projects", "Add sample projects" );    
+
+    // Import Objekte
+    
+    // Fileselector ist noch nicht implementiert..
+
+    EN.VerifyExists( "Import Project Data", "YES" );
+    EN.VerifyCaption( "Import Project Data", "Import Project Data" );    
+        
+    // 
+    
+    
+    
+    EN.StopApp( "Chrome" );
+    EN.EndTest();
+   }
+
 }
