@@ -47,24 +47,19 @@ jobs:
     - stage: MainMenuTest 
     - env:
         TEST="MainMenuTest"   
-
     - stage: LoginTest 
       env:
         TEST="LoginTest"
-
     - stage: PaymentTest 
     - env:
         TEST="PaymentTest"
-        
     - stage: RegistrationTest 
     - env:
         TEST="RegistrationTest"
-        
     - stage: ShoppingTest 
     - env:
         TEST="ShoppingTest"
-
-
+#
 notifications:
   email:
     - zh@openkeyword.de
