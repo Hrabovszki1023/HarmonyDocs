@@ -8,6 +8,7 @@ addons:
   chrome: stable
 
 env:
+  global:
   - OKWChromedriverPath: "/usr/bin/chromedriver"
   - OKWGeckodriverPath: "/usr/bin/geckodriver"
   
