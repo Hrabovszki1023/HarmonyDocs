@@ -43,7 +43,7 @@ install:
 script:
   - whereis google-chrome-stable
   - whereis chromedriver
-  - mvn test -Dtest=$TEST
+  - mvn test -Dtest=$TEST  -DfrmSeChrome.option.headless=headless
 
 notifications:
   email:
