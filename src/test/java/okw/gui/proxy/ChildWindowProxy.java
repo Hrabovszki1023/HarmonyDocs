@@ -295,5 +295,11 @@ public class ChildWindowProxy extends AnyWinBase implements IGUIChildwindow, IOK
     public Integer VerifyMaxLength() {
         return getInstance().VerifyMaxLength();
     }
+
+    @Override
+    public void TypeKeyTablecell( String arg0, String arg1, ArrayList<String> arg2 )
+    {
+        getInstance().TypeKeyTablecell( arg0, arg1, arg2);
+    }
     
 }

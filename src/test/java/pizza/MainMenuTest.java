@@ -73,7 +73,7 @@ public class MainMenuTest {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().driver.navigate().to("data:,");
+                SeDriver.getInstance().getDriver().navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
