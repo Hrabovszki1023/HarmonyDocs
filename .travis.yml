@@ -38,23 +38,23 @@ install:
 script:
   - whereis google-chrome-stable
   - whereis chromedriver
-  - mvn test -Dtest=$TEST  -DfrmSeChrome.option.headless=headless
+  # - mvn test -Dtest=$TEST  -DfrmSeChrome.option.headless=headless
+  - mvn test -DfrmSeChrome.option.headless=headless
 
 # Generate and deploy documentation
-jobs:
-  include:
-    - stage: pizza
-      env:
-        TEST="LoginTest"
-    - env:
-        TEST="MainMenuTest"   
-    - env:
-        TEST="PaymentTest"
-    - env:
-        TEST="RegistrationTest"
-    - env:
-        TEST="ShoppingTest"
-
+#jobs:
+#  include:
+#    - stage: pizza
+#      env:
+#        TEST="LoginTest"
+#    - env:
+#        TEST="MainMenuTest"   
+#    - env:
+#        TEST="PaymentTest"
+#    - env:
+#        TEST="RegistrationTest"
+#    - env:
+#        TEST="ShoppingTest"
 
 notifications:
   email:
