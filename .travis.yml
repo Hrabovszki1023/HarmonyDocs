@@ -44,15 +44,23 @@ script:
 # Do Test...
 jobs:
   include:
-    - stage: pizza
-      env:
-        TEST="LoginTest"
+    - stage: MainMenuTest 
     - env:
         TEST="MainMenuTest"   
+
+    - stage: LoginTest 
+      env:
+        TEST="LoginTest"
+
+    - stage: PaymentTest 
     - env:
         TEST="PaymentTest"
+        
+    - stage: RegistrationTest 
     - env:
         TEST="RegistrationTest"
+        
+    - stage: ShoppingTest 
     - env:
         TEST="ShoppingTest"
 
