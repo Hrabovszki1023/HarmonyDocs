@@ -8,14 +8,8 @@ addons:
   chrome: stable
 
 env:
-  global:
-    - TEST=LoginTest
-    - TEST=MainMenuTest   
-    - TEST=PaymentTest
-    - TEST=RegistrationTest
-    - TEST=ShoppingTest   
-    - OKWChromedriverPath: "/usr/bin/chromedriver"
-    - OKWGeckodriverPath: "/usr/bin/geckodriver"
+  - OKWChromedriverPath: "/usr/bin/chromedriver"
+  - OKWGeckodriverPath: "/usr/bin/geckodriver"
   
 before_install:
   #- wget https://github.com/mozilla/geckodriver/releases/download/v0.15.0/geckodriver-v0.15.0-linux64.tar.gz
@@ -44,6 +38,22 @@ script:
   - whereis google-chrome-stable
   - whereis chromedriver
   - mvn test -Dtest=$TEST  -DfrmSeChrome.option.headless=headless
+
+# Generate and deploy documentation
+jobs:
+  include:
+    - stage: pizza
+      env:
+        TEST="LoginTest"
+    - env:
+        TEST="MainMenuTest"   
+    - env:
+        TEST="PaymentTest"
+    - env:
+        TEST="RegistrationTest"
+    - env:
+        TEST="ShoppingTest"
+
 
 notifications:
   email:
