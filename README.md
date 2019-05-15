@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Hrabovszki1023/Test44Test.svg?branch=master)](https://travis-ci.org/Hrabovszki1023/Test44Test)
 ## Test44Test - Test for 4Test
 
 *Testt44Test ist das Testprojekt für das Testmodell-Werkzeug 4Test. Hier sind OKW-Testfälle mit und für 4Test erstellt.
