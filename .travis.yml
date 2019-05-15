@@ -45,20 +45,15 @@ script:
 jobs:
   include:
     - stage: MainMenuTest 
-    - env:
-        TEST="MainMenuTest"   
+    - env: TEST="MainMenuTest"   
     - stage: LoginTest 
-      env:
-        TEST="LoginTest"
+      env: TEST="LoginTest"
     - stage: PaymentTest 
-    - env:
-        TEST="PaymentTest"
+    - env: TEST="PaymentTest"
     - stage: RegistrationTest 
-    - env:
-        TEST="RegistrationTest"
+    - env: TEST="RegistrationTest"
     - stage: ShoppingTest 
-    - env:
-        TEST="ShoppingTest"
+    - env: TEST="ShoppingTest"
 #
 notifications:
   email:
