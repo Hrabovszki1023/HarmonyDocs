@@ -239,49 +239,7 @@ public class LoginTest {
         EN.EndTest();
     }
     
-    /**
-     * 1
-     */
-    @Test
-    public void goShopping() throws Exception {
-        EN.BeginTest( "goShopping" );
-        
-        step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
-        
-        if (System.getProperty("okw.app.Chrome.started") == null) {
-            EN.StartApp("Chrome");
-        } else {
-            try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
-                EN.SelectWindow("Chrome");
-            } catch (WebDriverException e) {
-                EN.StartApp("Chrome");
-            }
-        }
-        System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
-        step(1);
-        // Log in(A) = #pressed
-        EN.SelectWindow("Main menu");
-        EN.ClickOn("Log in");
-        step(2);
-        // Login name(I) = Smith
-        EN.SelectWindow("Login");
-        EN.SetValue("Login name", "Smith");
-        step(3);
-        // Password(I) = 2a4b6c
-        EN.SetValue("Password", "2a4b6c");
-        step(4);
-        // Next(A) = #pressed
-        EN.ClickOn("Next");
-        step(5);
-        // Next(A) = #pressed
-        EN.ClickOn("Next");
-        step(6);
-        
-        EN.EndTest();
-    }
+
     
     /**
      * 1
