@@ -67,115 +67,202 @@ public class PaymentTest {
         EN.BeginTest( "payWithDeliveryPrice" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Pay(A) = #pressed
         EN.SelectWindow("Shopping");
         EN.ClickOn("Pay");
-        step(6);
+        step(7);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(8);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(9);
         // Log in(O) = #present
         EN.SelectWindow("Main menu");
         EN.VerifyExists("Log in", "YES");
-        step(7);
+        step(10);
         // Log in(A) = #pressed
         EN.ClickOn("Log in");
-        step(8);
+        step(11);
         // Login name(I) = Smith
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Smith");
-        step(9);
+        step(12);
         // Password(I) = 2a4b6c
         EN.SetValue("Password", "2a4b6c");
-        step(10);
+        step(13);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(11);
+        step(14);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(12);
+        step(15);
         // Price of delivery(O) = 3
         EN.SelectWindow("Payment");
         EN.VerifyValue("Price of delivery", "3");
-        step(13);
+        step(16);
         // Total price(O) = 27.5
         EN.VerifyValue("Total price", "27.5");
-        step(14);
-        // Go shopping(A) = #pressed
-        EN.SelectWindow("Main menu");
-        EN.ClickOn("Go shopping");
-        step(15);
-        // Beer > Plus(A) = #pressed
-        EN.SelectWindow("Beer");
-        EN.ClickOn("Plus");
-        step(16);
-        // Pay(A) = #pressed
-        EN.SelectWindow("Shopping");
-        EN.ClickOn("Pay");
         step(17);
-        // Pay(A) = #pressed
-        EN.SelectWindow("Main menu");
-        EN.ClickOn("Pay");
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
         step(18);
-        // Price of delivery(O) = FREE!
-        EN.SelectWindow("Payment");
-        EN.VerifyValue("Price of delivery", "FREE!");
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
         step(19);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
         step(20);
-        // Beer > Delete(A) = #pressed
+        // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
-        EN.ClickOn("Delete");
+        EN.ClickOn("Plus");
         step(21);
         // Pay(A) = #pressed
         EN.SelectWindow("Shopping");
         EN.ClickOn("Pay");
         step(22);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(23);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(24);
+        // Pay(A) = #pressed
+        EN.SelectWindow("Main menu");
+        EN.ClickOn("Pay");
+        step(25);
+        // Price of delivery(O) = FREE!
+        EN.SelectWindow("Payment");
+        EN.VerifyValue("Price of delivery", "FREE!");
+        step(26);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(27);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(28);
+        // Go shopping(A) = #pressed
+        EN.SelectWindow("Main menu");
+        EN.ClickOn("Go shopping");
+        step(29);
+        // Beer > Delete(A) = #pressed
+        EN.SelectWindow("Beer");
+        EN.ClickOn("Delete");
+        step(30);
+        // Pay(A) = #pressed
+        EN.SelectWindow("Shopping");
+        EN.ClickOn("Pay");
+        step(31);
         // Price of delivery(O) = 3
         EN.SelectWindow("Payment");
         EN.VerifyValue("Price of delivery", "3");
-        step(23);
+        step(32);
         // Order(A) = #pressed
         EN.ClickOn("Order");
-        step(24);
+        step(33);
         // Order > Message(O) = "Thank you for ordering!"
         EN.SelectWindow("Order");
         EN.VerifyValue("Message", "Thank you for ordering!");
-        step(25);
+        step(34);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(35);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(36);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(26);
+        step(37);
         
         EN.EndTest();
     }
@@ -188,91 +275,110 @@ public class PaymentTest {
         EN.BeginTest( "payWithNoDeliveryPrice" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Coke > Plus(A) = #pressed
         EN.ClickOn("Plus");
-        step(6);
+        step(7);
         // Total price(O) = 25
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "25");
-        step(7);
+        step(8);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(8);
+        step(9);
         // Go to login(O) = #active
         EN.SelectWindow("Payment");
         EN.VerifyIsActive("Go to login", "YES");
-        step(9);
+        step(10);
         // Price of delivery(O) = FREE!
         EN.VerifyValue("Price of delivery", "FREE!");
-        step(10);
+        step(11);
         // Total price(O) = 25
         EN.VerifyValue("Total price", "25");
-        step(11);
+        step(12);
         // Go to login(A) = #pressed
         EN.ClickOn("Go to login");
-        step(12);
+        step(13);
         // Login name(I) = Smith
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Smith");
-        step(13);
+        step(14);
         // Password(I) = 2a4b6c
         EN.SetValue("Password", "2a4b6c");
-        step(14);
-        // Next(A) = #pressed
-        EN.ClickOn("Next");
         step(15);
         // Next(A) = #pressed
         EN.ClickOn("Next");
         step(16);
+        // Next(A) = #pressed
+        EN.ClickOn("Next");
+        step(17);
         // Go to login(O) = #non-present
         EN.SelectWindow("Payment");
         EN.VerifyExists("Go to login", "NO");
-        step(17);
+        step(18);
         // Order(O) = #active
         EN.VerifyIsActive("Order", "YES");
-        step(18);
+        step(19);
         // Order(A) = #pressed
         EN.ClickOn("Order");
-        step(19);
+        step(20);
         // Order > Message(O) = "Thank you for ordering!"
         EN.SelectWindow("Order");
         EN.VerifyValue("Message", "Thank you for ordering!");
-        step(20);
+        step(21);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(22);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(23);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(21);
+        step(24);
         
         EN.EndTest();
     }
@@ -285,146 +391,212 @@ public class PaymentTest {
         EN.BeginTest( "backToShopping" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Log in(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log in");
-        step(2);
+        step(3);
         // Login name(I) = Smith
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Smith");
-        step(3);
+        step(4);
         // Password(I) = 2a4b6c
         EN.SetValue("Password", "2a4b6c");
-        step(4);
-        // Next(A) = #pressed
-        EN.ClickOn("Next");
         step(5);
         // Next(A) = #pressed
         EN.ClickOn("Next");
         step(6);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
-        EN.SelectWindow("Chrome");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
+        // Next(A) = #pressed
+        EN.ClickOn("Next");
         step(7);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(8);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(9);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(8);
+        step(10);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(9);
+        step(11);
         // Pizza Mexicana > ordered number(O) = 1
         EN.VerifyValue("ordered number", "1");
-        step(10);
+        step(12);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(11);
+        step(13);
         // Total price(O) = 10
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "10");
-        step(12);
+        step(14);
         // Pay(O) = #active
         EN.VerifyIsActive("Pay", "YES");
-        step(13);
+        step(15);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(14);
+        step(16);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(17);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(18);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(15);
+        step(19);
         // Price of delivery(O) = 3
         EN.SelectWindow("Payment");
         EN.VerifyValue("Price of delivery", "3");
-        step(16);
+        step(20);
         // Total price(O) = 13
         EN.VerifyValue("Total price", "13");
-        step(17);
+        step(21);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(22);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(23);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(18);
+        step(24);
         // Total price(O) = 10
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "10");
-        step(19);
+        step(25);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(20);
+        step(26);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.ClickOn("Plus");
-        step(21);
+        step(27);
         // Total price(O) = 38
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "38");
-        step(22);
+        step(28);
         // Giveaway > Beer(I) = #pressed
         EN.SelectWindow("Giveaway");
         EN.ClickOn("Beer");
-        step(23);
+        step(29);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(24);
+        step(30);
         // Beer > ordered number(O) = 3
         EN.VerifyValue("ordered number", "3");
-        step(25);
+        step(31);
         // Total price(O) = 41
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "41");
-        step(26);
+        step(32);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(27);
+        step(33);
         // Price of delivery(O) = FREE!
         EN.SelectWindow("Payment");
         EN.VerifyValue("Price of delivery", "FREE!");
-        step(28);
+        step(34);
         // Total price(O) = 41
         EN.VerifyValue("Total price", "41");
-        step(29);
+        step(35);
         // Go to login(A) = #pressed
         EN.ClickOn("Go to login");
-        step(30);
+        step(36);
         // Login name(I) = Smith
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Smith");
-        step(31);
+        step(37);
         // Password(I) = 2a4b6c
         EN.SetValue("Password", "2a4b6c");
-        step(32);
+        step(38);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(33);
+        step(39);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(34);
+        step(40);
         // Order(O) = #active
         EN.SelectWindow("Payment");
         EN.VerifyIsActive("Order", "YES");
-        step(35);
+        step(41);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(42);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(43);
         // Exit(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Exit");
-        step(36);
+        step(44);
         
         EN.EndTest();
     }
@@ -437,163 +609,338 @@ public class PaymentTest {
         EN.BeginTest( "payWithRegistration" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Pay(A) = #pressed
         EN.SelectWindow("Shopping");
         EN.ClickOn("Pay");
-        step(6);
+        step(7);
         // Go to login(A) = #pressed
         EN.SelectWindow("Payment");
         EN.ClickOn("Go to login");
-        step(7);
+        step(8);
         // Login name(I) = Incorrect
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Incorrect");
-        step(8);
+        step(9);
         // Password(I) = 2a4b6c
         EN.SetValue("Password", "2a4b6c");
-        step(9);
+        step(10);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(10);
+        step(11);
         // Msg(O) = Incorrect name or password
         EN.VerifyValue("Msg", "Incorrect name or password");
-        step(11);
+        step(12);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(13);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(14);
         // Register(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Register");
-        step(12);
+        step(15);
         // Name(I) = Wigner
         EN.SelectWindow("Registration");
         EN.SetValue("Name", "Wigner");
-        step(13);
+        step(16);
         // Password(I) = 123456789012
         EN.SetValue("Password", "123456789012");
-        step(14);
+        step(17);
         // Second psw(I) = 123456789012
         EN.SetValue("Second psw", "123456789012");
-        step(15);
+        step(18);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(16);
+        step(19);
         // Online shopping > Alert(O) = Registration successful
         EN.SelectWindow("Online shopping");
         EN.VerifyValue("Alert", "Registration successful");
-        step(17);
+        step(20);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(21);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(22);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(18);
+        step(23);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(24);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(25);
         // Log in(A) = #pressed
+        EN.SelectWindow("Main menu");
         EN.ClickOn("Log in");
-        step(19);
+        step(26);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(27);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(28);
         // Log in(A) = #pressed
+        EN.SelectWindow("Main menu");
         EN.ClickOn("Log in");
-        step(20);
+        step(29);
         // Login name(I) = Wigner
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Wigner");
-        step(21);
+        step(30);
         // Password(I) = 123456789012
         EN.SetValue("Password", "123456789012");
-        step(22);
+        step(31);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(23);
+        step(32);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(33);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(34);
         // Pay(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Pay");
-        step(24);
+        step(35);
         // Total price(O) = 29.5
         EN.SelectWindow("Payment");
         EN.VerifyValue("Total price", "29.5");
-        step(25);
+        step(36);
         // Order(O) = #active
         EN.VerifyIsActive("Order", "YES");
-        step(26);
+        step(37);
         // Order(A) = #pressed
         EN.ClickOn("Order");
-        step(27);
+        step(38);
         // Order > Message(O) = "Thank you for ordering!"
         EN.SelectWindow("Order");
         EN.VerifyValue("Message", "Thank you for ordering!");
-        step(28);
+        step(39);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(40);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(41);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(29);
+        step(42);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(43);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(44);
         // Log in(A) = #pressed
+        EN.SelectWindow("Main menu");
         EN.ClickOn("Log in");
-        step(30);
+        step(45);
         // Login name(I) = Wigner
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Wigner");
-        step(31);
+        step(46);
         // Password(I) = 123456789012
         EN.SetValue("Password", "123456789012");
-        step(32);
+        step(47);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(33);
+        step(48);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(49);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(50);
         // Delete(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Delete");
-        step(34);
+        step(51);
         // Yes(A) = #pressed
         EN.SelectWindow("Registration");
         EN.ClickOn("Yes");
-        step(35);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
-        EN.SelectWindow("Chrome");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
-        step(36);
+        step(52);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(53);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(54);
         // Log in(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log in");
-        step(37);
+        step(55);
         // Login name(I) = Wigner
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Wigner");
-        step(38);
+        step(56);
         // Password(I) = 123456789012
         EN.SetValue("Password", "123456789012");
-        step(39);
+        step(57);
         // Next(A) = #pressed
         EN.ClickOn("Next");
-        step(40);
+        step(58);
         // Msg(O) = Incorrect name or password
         EN.VerifyValue("Msg", "Incorrect name or password");
-        step(41);
+        step(59);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(60);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(61);
+        // Exit(A) = #pressed
+        EN.SelectWindow("Main menu");
+        EN.ClickOn("Exit");
+        step(62);
         
         EN.EndTest();
     }
@@ -606,149 +953,250 @@ public class PaymentTest {
         EN.BeginTest( "reduceBelow30" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Log in(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log in");
-        step(2);
+        step(3);
         // Login name(I) = Smith
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Smith");
-        step(3);
+        step(4);
         // Password(I) = 2a4b6c
         EN.SetValue("Password", "2a4b6c");
-        step(4);
-        // Next(A) = #pressed
-        EN.ClickOn("Next");
         step(5);
         // Next(A) = #pressed
         EN.ClickOn("Next");
         step(6);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
-        EN.SelectWindow("Chrome");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
+        // Next(A) = #pressed
+        EN.ClickOn("Next");
         step(7);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(8);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(9);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(8);
+        step(10);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(9);
+        step(11);
         // Pizza Mexicana > ordered number(O) = 1
         EN.VerifyValue("ordered number", "1");
-        step(10);
+        step(12);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(11);
+        step(13);
         // Total price(O) = 10
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "10");
-        step(12);
+        step(14);
         // Pay(O) = #active
         EN.VerifyIsActive("Pay", "YES");
-        step(13);
+        step(15);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(14);
+        step(16);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(17);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(18);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(15);
+        step(19);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(20);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(21);
         // Go shopping(A) = #pressed
+        EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(16);
+        step(22);
         // Total price(O) = 10
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "10");
-        step(17);
+        step(23);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(18);
+        step(24);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.ClickOn("Plus");
-        step(19);
+        step(25);
         // Total price(O) = 38
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "38");
-        step(20);
+        step(26);
         // Giveaway > Beer(I) = #pressed
         EN.SelectWindow("Giveaway");
         EN.ClickOn("Beer");
-        step(21);
+        step(27);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(22);
+        step(28);
         // Beer > ordered number(O) = 3
         EN.VerifyValue("ordered number", "3");
-        step(23);
+        step(29);
         // Total price(O) = 41
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "41");
-        step(24);
+        step(30);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(25);
+        step(31);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(32);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(33);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(26);
+        step(34);
         // Pizza Rucola XXL > Delete(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Delete");
-        step(27);
+        step(35);
         // Total price(O) = 13
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "13");
-        step(28);
+        step(36);
         // Beer > ordered number(O) = 2
         EN.SelectWindow("Beer");
         EN.VerifyValue("ordered number", "2");
-        step(29);
+        step(37);
         // Pay(A) = #pressed
         EN.SelectWindow("Shopping");
         EN.ClickOn("Pay");
-        step(30);
+        step(38);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(39);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(40);
         // Pay(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Pay");
-        step(31);
+        step(41);
         // Total price(O) = 16
         EN.SelectWindow("Payment");
         EN.VerifyValue("Total price", "16");
-        step(32);
+        step(42);
         // Order(O) = #active
         EN.VerifyIsActive("Order", "YES");
-        step(33);
+        step(43);
         // Order(A) = #pressed
         EN.ClickOn("Order");
-        step(34);
+        step(44);
         // Order > Message(O) = "Thank you for ordering!"
         EN.SelectWindow("Order");
         EN.VerifyValue("Message", "Thank you for ordering!");
-        step(35);
+        step(45);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(46);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(47);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(36);
+        step(48);
         
         EN.EndTest();
     }

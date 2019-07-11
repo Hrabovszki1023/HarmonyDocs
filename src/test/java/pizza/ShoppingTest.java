@@ -67,61 +67,63 @@ public class ShoppingTest {
         EN.BeginTest( "underTen" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Mexicana > ordered number(O) = 0
         EN.SelectWindow("Pizza Mexicana");
         EN.VerifyValue("ordered number", "0");
-        step(3);
+        step(4);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Pizza Mexicana > ordered number(O) = 1
         EN.VerifyValue("ordered number", "1");
-        step(5);
+        step(6);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(6);
+        step(7);
         // Total price(O) = 9
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "9");
-        step(7);
+        step(8);
         // Pay(O) = #non-active
         EN.VerifyIsActive("Pay", "NO");
-        step(8);
+        step(9);
         // Warning(O) = "You should order more for at least 1 euro"
         EN.VerifyValue("Warning", "You should order more for at least 1 euro");
-        step(9);
+        step(10);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(10);
+        step(11);
         // Pizza Mexicana > Delete(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Delete");
-        step(11);
+        step(12);
         // Warning(O) = "You should order more for at least 5 euros"
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Warning", "You should order more for at least 5 euros");
-        step(12);
+        step(13);
         
         EN.EndTest();
     }
@@ -134,51 +136,53 @@ public class ShoppingTest {
         EN.BeginTest( "under30" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Mexicana > ordered number(O) = 0
         EN.SelectWindow("Pizza Mexicana");
         EN.VerifyValue("ordered number", "0");
-        step(3);
+        step(4);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(6);
+        step(7);
         // Total price(O) = 29.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "29.5");
-        step(7);
+        step(8);
         // Pay(O) = #active
         EN.VerifyIsActive("Pay", "YES");
-        step(8);
+        step(9);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(9);
+        step(10);
         
         EN.EndTest();
     }
@@ -191,128 +195,130 @@ public class ShoppingTest {
         EN.BeginTest( "deleteGiveawayBeer" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(6);
+        step(7);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(7);
+        step(8);
         // Total price(O) = 48
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "48");
-        step(8);
+        step(9);
         // Pizza Rucola XXL > Delete(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Delete");
-        step(9);
+        step(10);
         // Pizza Rucola XXL > ordered number(O) = 0
         EN.VerifyValue("ordered number", "0");
-        step(10);
+        step(11);
         // Total price(O) = 20
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "20");
-        step(11);
+        step(12);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(12);
+        step(13);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(13);
+        step(14);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(14);
+        step(15);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(15);
+        step(16);
         // Total price(O) = 40.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "40.5");
-        step(16);
+        step(17);
         // Giveaway(O) = #present
         EN.VerifyExists("Giveaway", "YES");
-        step(17);
+        step(18);
         // Giveaway > Beer(I) = #pressed
         EN.SelectWindow("Giveaway");
         EN.ClickOn("Beer");
-        step(18);
+        step(19);
         // Beer > ordered number(O) = 3
         EN.SelectWindow("Beer");
         EN.VerifyValue("ordered number", "3");
-        step(19);
+        step(20);
         // Beer > Delete(A) = #pressed
         EN.ClickOn("Delete");
-        step(20);
+        step(21);
         // Beer > ordered number(O) = 0
         EN.VerifyValue("ordered number", "0");
-        step(21);
+        step(22);
         // Total price(O) = 34.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "34.5");
-        step(22);
+        step(23);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(23);
+        step(24);
         // Total price(O) = 41.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "41.5");
-        step(24);
+        step(25);
         // Giveaway(O) = #non-present
         EN.VerifyExists("Giveaway", "NO");
-        step(25);
+        step(26);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(26);
+        step(27);
         // Total price(O) = 43.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "43.5");
-        step(27);
+        step(28);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(28);
+        step(29);
         // Total price(O) = 43.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "43.5");
-        step(29);
+        step(30);
         
         EN.EndTest();
     }
@@ -325,128 +331,130 @@ public class ShoppingTest {
         EN.BeginTest( "deleteGiveawayCoke" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(6);
+        step(7);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(7);
+        step(8);
         // Total price(O) = 48
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "48");
-        step(8);
+        step(9);
         // Pizza Rucola XXL > Delete(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Delete");
-        step(9);
+        step(10);
         // Pizza Rucola XXL > ordered number(O) = 0
         EN.VerifyValue("ordered number", "0");
-        step(10);
+        step(11);
         // Total price(O) = 20
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "20");
-        step(11);
+        step(12);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(12);
+        step(13);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(13);
+        step(14);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(14);
+        step(15);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(15);
+        step(16);
         // Total price(O) = 40.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "40.5");
-        step(16);
+        step(17);
         // Giveaway(O) = #present
         EN.VerifyExists("Giveaway", "YES");
-        step(17);
+        step(18);
         // Giveaway > Coke(I) = #pressed
         EN.SelectWindow("Giveaway");
         EN.ClickOn("Coke");
-        step(18);
+        step(19);
         // Coke > ordered number(O) = 2
         EN.SelectWindow("Coke");
         EN.VerifyValue("ordered number", "2");
-        step(19);
+        step(20);
         // Coke > Delete(A) = #pressed
         EN.ClickOn("Delete");
-        step(20);
+        step(21);
         // Coke > ordered number(O) = 0
         EN.VerifyValue("ordered number", "0");
-        step(21);
+        step(22);
         // Total price(O) = 38.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "38.5");
-        step(22);
+        step(23);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(23);
+        step(24);
         // Total price(O) = 45.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "45.5");
-        step(24);
+        step(25);
         // Giveaway(O) = #non-present
         EN.VerifyExists("Giveaway", "NO");
-        step(25);
+        step(26);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(26);
+        step(27);
         // Total price(O) = 48.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "48.5");
-        step(27);
+        step(28);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(28);
+        step(29);
         // Total price(O) = 48.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "48.5");
-        step(29);
+        step(30);
         
         EN.EndTest();
     }
@@ -459,100 +467,102 @@ public class ShoppingTest {
         EN.BeginTest( "noDoubleGiveaway" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Pizza Rucola XXL > ordered number(O) = 2
         EN.VerifyValue("ordered number", "2");
-        step(6);
+        step(7);
         // Total price(O) = 30
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "30");
-        step(7);
+        step(8);
         // Pay(O) = #active
         EN.VerifyIsActive("Pay", "YES");
-        step(8);
+        step(9);
         // Pizza Rucola XXL > Delete(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Delete");
-        step(9);
+        step(10);
         // Pizza Rucola XXL > ordered number(O) = 0
         EN.VerifyValue("ordered number", "0");
-        step(10);
+        step(11);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(11);
+        step(12);
         // Pizza Chicken > Plus(A) = #pressed
         EN.ClickOn("Plus");
-        step(12);
+        step(13);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(13);
+        step(14);
         // Giveaway(O) = #present
         EN.SelectWindow("Shopping");
         EN.VerifyExists("Giveaway", "YES");
-        step(14);
+        step(15);
         // Total price(O) = 33
         EN.VerifyValue("Total price", "33");
-        step(15);
+        step(16);
         // Giveaway > Coke(I) = #pressed
         EN.SelectWindow("Giveaway");
         EN.ClickOn("Coke");
-        step(16);
+        step(17);
         // Coke > ordered number(O) = 2
         EN.SelectWindow("Coke");
         EN.VerifyValue("ordered number", "2");
-        step(17);
+        step(18);
         // Total price(O) = 33
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "33");
-        step(18);
-        // Pizza Rucola XXL > Plus(A) = #pressed
-        EN.SelectWindow("Pizza Rucola XXL");
-        EN.ClickOn("Plus");
         step(19);
         // Pizza Rucola XXL > Plus(A) = #pressed
+        EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
         step(20);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.ClickOn("Plus");
         step(21);
+        // Pizza Rucola XXL > Plus(A) = #pressed
+        EN.ClickOn("Plus");
+        step(22);
         // Total price(O) = 75
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "75");
-        step(22);
+        step(23);
         // Giveaway(O) = #non-present
         EN.VerifyExists("Giveaway", "NO");
-        step(23);
+        step(24);
         
         EN.EndTest();
     }
@@ -565,47 +575,49 @@ public class ShoppingTest {
         EN.BeginTest( "twentyfive" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Coke > Plus(A) = #pressed
         EN.ClickOn("Plus");
-        step(6);
+        step(7);
         // Total price(O) = 25
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "25");
-        step(7);
+        step(8);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(8);
+        step(9);
         
         EN.EndTest();
     }
@@ -618,44 +630,46 @@ public class ShoppingTest {
         EN.BeginTest( "belowTwentyfive" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(2);
+        step(3);
         // Pizza Chicken > Plus(A) = #pressed
         EN.SelectWindow("Pizza Chicken");
         EN.ClickOn("Plus");
-        step(3);
+        step(4);
         // Coke > Plus(A) = #pressed
         EN.SelectWindow("Coke");
         EN.ClickOn("Plus");
-        step(4);
+        step(5);
         // Pizza Rucola XXL > Plus(A) = #pressed
         EN.SelectWindow("Pizza Rucola XXL");
         EN.ClickOn("Plus");
-        step(5);
+        step(6);
         // Total price(O) = 24.5
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "24.5");
-        step(6);
+        step(7);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(7);
+        step(8);
         
         EN.EndTest();
     }
@@ -668,71 +682,103 @@ public class ShoppingTest {
         EN.BeginTest( "ten" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         // Log in(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log in");
-        step(2);
+        step(3);
         // Login name(I) = Smith
         EN.SelectWindow("Login");
         EN.SetValue("Login name", "Smith");
-        step(3);
+        step(4);
         // Password(I) = 2a4b6c
         EN.SetValue("Password", "2a4b6c");
-        step(4);
-        // Next(A) = #pressed
-        EN.ClickOn("Next");
         step(5);
         // Next(A) = #pressed
         EN.ClickOn("Next");
         step(6);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
-        EN.SelectWindow("Chrome");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
+        // Next(A) = #pressed
+        EN.ClickOn("Next");
         step(7);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(8);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(9);
         // Go shopping(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Go shopping");
-        step(8);
+        step(10);
         // Pizza Mexicana > Plus(A) = #pressed
         EN.SelectWindow("Pizza Mexicana");
         EN.ClickOn("Plus");
-        step(9);
+        step(11);
         // Pizza Mexicana > ordered number(O) = 1
         EN.VerifyValue("ordered number", "1");
-        step(10);
+        step(12);
         // Beer > Plus(A) = #pressed
         EN.SelectWindow("Beer");
         EN.ClickOn("Plus");
-        step(11);
+        step(13);
         // Total price(O) = 10
         EN.SelectWindow("Shopping");
         EN.VerifyValue("Total price", "10");
-        step(12);
+        step(14);
         // Pay(O) = #active
         EN.VerifyIsActive("Pay", "YES");
-        step(13);
+        step(15);
         // Pay(A) = #pressed
         EN.ClickOn("Pay");
-        step(14);
+        step(16);
+        // Platform(I) = Chrome
+        
+        if (System.getProperty("okw.app.Chrome.started") == null) {
+            EN.StartApp("Chrome");
+        } else {
+            try {
+                SeDriver.getInstance().driver.navigate().to("data:,");
+                EN.SelectWindow("Chrome");
+            } catch (WebDriverException e) {
+                EN.StartApp("Chrome");
+            }
+        }
+        System.setProperty("okw.app.Chrome.started", "true");
+        step(17);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(18);
         // Log out(A) = #pressed
         EN.SelectWindow("Main menu");
         EN.ClickOn("Log out");
-        step(15);
+        step(19);
         
         EN.EndTest();
     }

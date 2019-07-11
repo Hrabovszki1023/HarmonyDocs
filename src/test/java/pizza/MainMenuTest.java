@@ -67,21 +67,23 @@ public class MainMenuTest {
         EN.BeginTest( "t1" );
         
         step(0);
-        // URL(I) = "http://www.online-shopping.eskuvoje.net"
+        // Platform(I) = Chrome
         
         if (System.getProperty("okw.app.Chrome.started") == null) {
             EN.StartApp("Chrome");
         } else {
             try {
-                SeDriver.getInstance().getDriver().navigate().to("data:,");
+                SeDriver.getInstance().driver.navigate().to("data:,");
                 EN.SelectWindow("Chrome");
             } catch (WebDriverException e) {
                 EN.StartApp("Chrome");
             }
         }
         System.setProperty("okw.app.Chrome.started", "true");
-        EN.SetValue("URL", "http://www.online-shopping.eskuvoje.net");
         step(1);
+        // URL(I) = "https://cloud.4test.io/pizza/"
+        EN.SetValue("URL", "https://cloud.4test.io/pizza/");
+        step(2);
         
         EN.EndTest();
     }
