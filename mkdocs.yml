@@ -1,9 +1,9 @@
 site_name: Test docs
 site_description: 'A docs test'
-site_author: 'Michael Hausenblas'
+site_author: 'Zoltan Hrabovszki'
 docs_dir: docs/
-repo_name: 'mhausenblas/actions-sandbox'
-repo_url: 'https://github.com/mhausenblas/actions-sandbox'
+repo_name: 'hrabovszki1023/HarmonyDocs'
+repo_url: 'https://github.com/Hrabovszki1023/HarmonyDocs'
 nav:
     - Home: index.md
 theme:
