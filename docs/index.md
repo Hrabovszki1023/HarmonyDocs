@@ -4,8 +4,9 @@ One more, finally. Or not? :)
 
 Now:
 
-```
-$ some 
+```java
+class blaba implements{
+} 
 ```
 
 Look what she said:
