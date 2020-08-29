@@ -6,7 +6,7 @@ repo_name: 'hrabovszki1023/HarmonyDocs'
 repo_url: 'https://github.com/Hrabovszki1023/HarmonyDocs'
 nav:
     - Home:  'index.md'
-    - OKW:   'keywords/index.md'
+    - OKW:   'keywords/keywordslist.md'
     - About: 'about.md'
 theme:
   name: 'material'
