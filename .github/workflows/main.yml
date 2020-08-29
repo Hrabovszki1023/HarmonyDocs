@@ -15,4 +15,4 @@ jobs:
       - name: Deploy docs
         uses: Hrabovszki1023/HarmonyDocs@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
