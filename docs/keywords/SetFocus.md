@@ -19,15 +19,11 @@ See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFo
 
 
 ???+ example
-
   === "OKW"
-
     ``` java
     EN.SetFocus( "User" )
     ```
-
   === "Harmony"
-
     ```
     Categories:
     User (I): John
