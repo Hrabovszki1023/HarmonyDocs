@@ -17,13 +17,16 @@ Keyword sets the focus to the GUI-Object with the Category name `CAT`.
 
 See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFocus( CAT )|LogHasFocus( CAT )]]
 
+!!! Example
 
-=== "OKW"
-    ```java
+  === "OKW"
+
+    ``` java
     EN.SetFocus( "User" )
     ```
 
-=== "Harmony"
+  === "Harmony"
+
     ```
     Categories:
     User (I): John
