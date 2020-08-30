@@ -17,7 +17,8 @@ Keyword sets the focus to the GUI-Object with the Category name `CAT`.
 
 See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFocus( CAT )|LogHasFocus( CAT )]]
 
-!!! Example
+
+!!! example
 
   === "OKW"
 
