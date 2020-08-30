@@ -18,6 +18,8 @@ Keyword sets the focus to the GUI-Object with the Category name `CAT`.
 See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFocus( CAT )|LogHasFocus( CAT )]]
 
 
+AAAA
+
 ???+ example
   === "OKW"
     ``` java
@@ -34,5 +36,4 @@ See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFo
     WHEN User IS John AND
     Password IS ahjelpdqQ
     WHEN OK HAS #focus
-
     ```
