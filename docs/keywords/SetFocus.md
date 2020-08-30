@@ -18,27 +18,23 @@ Keyword sets the focus to the GUI-Object with the Category name `CAT`.
 See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFocus( CAT )|LogHasFocus( CAT )]]
 
 
-##Examples
+!!! example
 
-### Default Usage
+=== OKW
+    ```java
+    EN.SetFocus( "User" )
+    ```
 
-```java
-EN.SetFocus( "User" )
-```
+=== Harmony
+    ```
+    Categories:
+    User (I): John
+    Password (I): ahjelpdqQ
+    OK (A): #pressed; #focus
 
-### ![Harmony](https://user-images.githubusercontent.com/15831418/75094375-b47a8e80-558a-11ea-9959-41d2569c21e6.png){: height="23" }
-
-height="100"
-
-```
-Categories:
-User (I): John
-Password (I): ahjelpdqQ
-OK (A): #PRESSED; #focus
-
-Acceptance Criteria:
-WHEN User IS John AND
- Password IS ahjelpdqQ
-WHEN OK HAS #focus
+    Acceptance Criteria:
+    WHEN User IS John AND
+    Password IS ahjelpdqQ
+    WHEN OK HAS #focus
 
 ```

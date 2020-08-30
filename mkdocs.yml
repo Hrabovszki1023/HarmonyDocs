@@ -15,3 +15,5 @@ theme:
   name: 'material'
 markdown_extensions:
     - attr_list
+    - pymdownx.tabbed
+    - pymdownx.superfences
