@@ -8,17 +8,15 @@ Keyword sets the focus to the GUI-Object with the Category name `CAT`.
 
 | Abstruction Level         | Expression                  |
 | ------------------------: | :---------------------------|
-| OKW                       | `SetFocus( CAT )`           |
-| Gherkin++ Category        | `CAT (I): #focus`           |
-| Gherkin++ AC              | `WHEN CAT HAS #focus`       |
-| Called OKW GUI-Adapter Method | `IGUIChildwindow.Focus()`   |
+| OKW                       | `SetFocus( CAT )`             |
+| Gherkin++ Category        | `CAT (I): #focus`             |
+| Gherkin++ AC              | `WHEN CAT HAS #focus`         |
+| Called OKW GUI-Adapter Method | `IGUIChildwindow.Focus()`  |
 
 ## Opponent
 
 See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFocus( CAT )|LogHasFocus( CAT )]]
 
-
-!!! example
 
 === OKW
     ```java
@@ -37,4 +35,4 @@ See: [[VerifyHasFocus( CAT, ExpVal )|VerifyHasFocus( CAT, ExpVal )]], [[LogHasFo
     Password IS ahjelpdqQ
     WHEN OK HAS #focus
 
-```
+    ```
